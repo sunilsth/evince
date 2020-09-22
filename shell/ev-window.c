@@ -6698,6 +6698,8 @@ static void
 launch_action (EvWindow *window, EvLinkAction *action)
 {
 	/* Do nothing, https://gitlab.gnome.org/GNOME/evince/-/issues/1333 */
+	g_warning ("Security alert: this document has been prevented from opening the file “%s”",
+	           ev_link_action_get_filename (action));
 }
 
 static void
